@@ -1,4 +1,4 @@
-# A theme with an emphasis on the right (hand) side of the terminal.
+# A theme with an emphasis on the right side (hence the name) of the terminal.
 #
 # The prompt looks as follows, where _ is the cursor:
 #

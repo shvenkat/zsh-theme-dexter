@@ -1,6 +1,6 @@
 # Dexter, a zsh theme.
 
-A theme with an emphasis on the right (hand) side of the terminal.
+A theme with an emphasis on the right side (hence the name) of the terminal.
 
 
 ## Example
@@ -50,4 +50,5 @@ DRAWINGS HEAVY HORIZONTAL' (U+2501).
 ## License
 
 Copyright (c) 2016 by Shiv Venkatasubrahmanyam <shiv@alum.mit.edu>.
+
 License: MIT.
