@@ -3,13 +3,15 @@
 A theme with an emphasis on the right side (hence the name) of the terminal.
 
 
-## Example
+## Examples
 
-The prompt looks as follows, where _ is the cursor:
-```
-────────────────────────────────────────────────────────────────────────────────
-%% _                                        [env] (master *%) ~/f/b/quux megatr…
-```
+Here's how this theme looks with the [solarized]
+(http://ethanschoonover.com/solarized) color palette, in dark and
+light modes.
+
+![Dexter on Solarized Dark](demo_solarized_dark.png)
+
+![Dexter on Solarized Light](demo_solarized_light.png)
 
 
 ## Features
@@ -31,10 +33,10 @@ The prompt looks as follows, where _ is the cursor:
 
 ## Customization
 
-To facilitate integration with terminal color schemes, the color of certain
-elements can be customized using the following variables. The default colors
-shown below are intended for use with the solarized dark palette. To override
-these, specify any valid terminal/ANSI color escape sequences.
+The color of certain elements can be customized using the following
+variables. The default colors shown below are intended for use with
+the solarized dark palette. To override these, specify any valid
+terminal/ANSI color escape sequences.
 
     DEXTER_SEPARATOR_COLOR    dark gray    $fg[black]
     DEXTER_VENV_COLOR         yellow       $fg[yellow]
@@ -42,9 +44,9 @@ these, specify any valid terminal/ANSI color escape sequences.
     DEXTER_WORKDIR_COLOR      light gray   $fg[default]
     DEXTER_HOSTNAME_COLOR     dark gray    $fg_bold[green]
 
-Finally, the line drawing character(s) can be changed using the variable
-DEXTER_SEPARATOR_CHARS. The default value is the Unicode character 'BOX
-DRAWINGS HEAVY HORIZONTAL' (U+2501).
+The line drawing character(s) can be changed using the variable
+DEXTER_SEPARATOR_CHARS. The default value is the Unicode character
+'BOX DRAWINGS HEAVY HORIZONTAL' (U+2501).
 
 
 ## License
