@@ -27,11 +27,13 @@
 # shown below are intended for use with the solarized dark palette. To override
 # these, specify any valid terminal/ANSI color escape sequences.
 #
-#   DEXTER_SEPARATOR_COLOR    black        $fg[black]
-#   DEXTER_VENV_COLOR         yellow       $fg[yellow]
-#   DEXTER_GIT_COLOR          violet       $fg_bold[magenta]
-#   DEXTER_WORKDIR_COLOR      normal       $fg[default]
-#   DEXTER_HOSTNAME_COLOR     dark gray    $fg_bold[green]
+#   DEXTER_SEPARATOR_COLOR       black        $fg[black]
+#   DEXTER_EXIT_SUCCESS_COLOR    green        $fg[green]
+#   DEXTER_EXIT_FAILURE_COLOR    red          $fg[red]
+#   DEXTER_VENV_COLOR            yellow       $fg[yellow]
+#   DEXTER_GIT_COLOR             violet       $fg_bold[magenta]
+#   DEXTER_WORKDIR_COLOR         normal       $fg[default]
+#   DEXTER_HOSTNAME_COLOR        dark gray    $fg_bold[green]
 #
 # Finally, the line drawing character(s) can be changed using the variable
 # DEXTER_SEPARATOR_CHARS. The default value is the Unicode character 'BOX
@@ -44,6 +46,8 @@
 setopt prompt_subst
 
 DEXTER_SEPARATOR_COLOR=${DEXTER_SEPARATOR_COLOR=$fg[black]}
+DEXTER_EXIT_SUCCESS_COLOR=${DEXTER_EXIT_SUCCESS_COLOR=$fg[green]}
+DEXTER_EXIT_FAILURE_COLOR=${DEXTER_EXIT_FAILURE_COLOR=$fg[red]}
 DEXTER_VENV_COLOR=${DEXTER_VENV_COLOR=$fg[yellow]}
 DEXTER_GIT_COLOR=${DEXTER_GIT_COLOR=$fg_bold[magenta]}
 DEXTER_WORKDIR_COLOR=${DEXTER_WORKDIR_COLOR=$fg[default]}
@@ -61,7 +65,7 @@ PS1='%{${DEXTER_SEPARATOR_COLOR}%}${__separator[0,$COLUMNS]}%{$reset_color%}
 '
 # Use '%% ' if the shell is running without privileges, '## ' otherwise.
 # Use green text if the last command exited successfully, red otherwise.
-PS1+='%(?,%{$fg[green]%},%{$fg[red]%})%#%# %{$reset_color%}'
+PS1+='%(?,%{${DEXTER_EXIT_SUCCESS_COLOR}%},%{${DEXTER_EXIT_FAILURE_COLOR}%})%#%# %{$reset_color%}'
 
 
 # RIGHT PROMPT
