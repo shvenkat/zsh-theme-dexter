@@ -27,10 +27,10 @@
 # shown below are intended for use with the solarized dark palette. To override
 # these, specify any valid terminal/ANSI color escape sequences.
 #
-#   DEXTER_SEPARATOR_COLOR    dark gray    $fg[black]
+#   DEXTER_SEPARATOR_COLOR    black        $fg[black]
 #   DEXTER_VENV_COLOR         yellow       $fg[yellow]
 #   DEXTER_GIT_COLOR          violet       $fg_bold[magenta]
-#   DEXTER_WORKDIR_COLOR      light gray   $fg[default]
+#   DEXTER_WORKDIR_COLOR      normal       $fg[default]
 #   DEXTER_HOSTNAME_COLOR     dark gray    $fg_bold[green]
 #
 # Finally, the line drawing character(s) can be changed using the variable
