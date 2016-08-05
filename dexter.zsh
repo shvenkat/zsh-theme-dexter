@@ -92,7 +92,7 @@ fi
 # Working directory.
 if type shrink_path >/dev/null 2>&1; then
     # Use a fish-style abbreviation.
-    RPS1+='%{${DEXTER_WORKDIR_COLOR}%}$(shrink_path -f -T)%{$reset_color%} '
+    RPS1+='%{${DEXTER_WORKDIR_COLOR}%}$(shrink_path -l -t -T)%{$reset_color%} '
 else
     # Show at most 1 leading and 2 trailing path components.
     RPS1+='%{${DEXTER_WORKDIR_COLOR}%}%(4~|%-1~/…/%2~|%3~)%{$reset_color%} '
