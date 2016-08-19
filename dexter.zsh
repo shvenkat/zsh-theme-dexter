@@ -52,20 +52,20 @@ DEXTER_VENV_COLOR=${DEXTER_VENV_COLOR=$fg[yellow]}
 DEXTER_GIT_COLOR=${DEXTER_GIT_COLOR=$fg_bold[magenta]}
 DEXTER_WORKDIR_COLOR=${DEXTER_WORKDIR_COLOR=$fg[default]}
 DEXTER_HOSTNAME_COLOR=${DEXTER_HOSTNAME_COLOR=$fg_bold[green]}
+DEXTER_SEPARATOR_CHARS=${DEXTER_SEPARATOR_CHARS='━'}
 
 
 # LEFT PROMPT
 
 # Use a horizontal line as a separator before each prompt.
-__separator=${DEXTER_SEPARATOR_CHARS='━'}
-while [[ ${#__separator} -lt 1024 ]]; do
-    __separator+="$__separator"
-done
-PS1='%{${DEXTER_SEPARATOR_COLOR}%}${__separator[0,$COLUMNS]}%{$reset_color%}
-'
+__terminator=
+__separator='${DEXTER_SEPARATOR_COLOR}${(l:$COLUMNS::'$DEXTER_SEPARATOR_CHARS':)__terminator}${reset_color}'
+precmd() {
+    eval "echo $__separator"
+}
 # Use '%% ' if the shell is running without privileges, '## ' otherwise.
 # Use green text if the last command exited successfully, red otherwise.
-PS1+='%(?,%{${DEXTER_EXIT_SUCCESS_COLOR}%},%{${DEXTER_EXIT_FAILURE_COLOR}%})%#%# %{$reset_color%}'
+PS1='%(?,%{${DEXTER_EXIT_SUCCESS_COLOR}%},%{${DEXTER_EXIT_FAILURE_COLOR}%})%#%# %{$reset_color%}'
 
 
 # RIGHT PROMPT
