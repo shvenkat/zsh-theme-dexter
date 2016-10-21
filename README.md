@@ -27,7 +27,7 @@ light modes.
   + python virtualenv, using the virtualenv plugin (robbyrussell/oh-my-zsh),
   + git status, using the gitfast plugin (robbyrussell/oh-my-zsh),
   + fish-style abbreviated working directory, using the shrink-path plugin
-    (shvenkat/oh-my-zsh), and
+    (robbyrussell/oh-my-zsh), and
   + abbreviated hostname.
 
 
