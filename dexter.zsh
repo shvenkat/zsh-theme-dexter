@@ -60,7 +60,7 @@ precmd() {
         echo"
 }
 # Use '▶▶ ' if the shell is running without privileges, '## ' otherwise.
-PS1='%(!.#.▶)%(!.#.▶) '
+PS1='%(!.#.◀)%(!.#.▶) '
 
 
 # RIGHT PROMPT
