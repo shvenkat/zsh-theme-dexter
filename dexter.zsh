@@ -34,8 +34,9 @@ DEXTER_EXIT_STATUS_COLOR="${DEXTER_EXIT_STATUS_COLOR:-$fg[red]}"
 DEXTER_SHOW_ELAPSED_TIME="${DEXTER_SHOW_ELAPSED_TIME:-1}"
 DEXTER_TIME_LIMIT_SECS="${DEXTER_TIME_LIMIT_SECS:-5}"
 if ! [[ -v DEXTER_UNTIMED_COMMANDS ]]; then
-    DEXTER_UNTIMED_COMMANDS=("more" "less" "emacs" "emacsclient" "nvim" "vim"
-                             "man" "git" "time")
+    DEXTER_UNTIMED_COMMANDS=("time" "bg" "fg" "more" "less" "man"
+                             "emacs" "emacsclient" "nvim" "vim" "nano"
+                             "git")
 fi
 
 
