@@ -21,7 +21,7 @@
 # ----------  DEFAULTS  ----------
 
 DEXTER_LEFT_PROMPT_STRING="${DEXTER_LEFT_PROMPT_STRING:-◀▶}"
-if ! [[ -v DEXTER_RIGHT_PROMPT_ELEMS ]]; then
+if ! [[ -n "${DEXTER_RIGHT_PROMPT_ELEMS+set}" ]]; then
     DEXTER_RIGHT_PROMPT_ELEMS=(venv git workdir host time)
 fi
 DEXTER_VENV_COLOR="${DEXTER_VENV_COLOR:-$fg_bold[green]}"
@@ -33,7 +33,7 @@ DEXTER_SHOW_EXIT_MESSAGE="${DEXTER_SHOW_EXIT_MESSAGE:-1}"
 DEXTER_EXIT_STATUS_COLOR="${DEXTER_EXIT_STATUS_COLOR:-$fg[red]}"
 DEXTER_SHOW_ELAPSED_TIME="${DEXTER_SHOW_ELAPSED_TIME:-1}"
 DEXTER_TIME_LIMIT_SECS="${DEXTER_TIME_LIMIT_SECS:-5}"
-if ! [[ -v DEXTER_UNTIMED_COMMANDS ]]; then
+if ! [[ -n "${DEXTER_UNTIMED_COMMANDS+set}" ]]; then
     DEXTER_UNTIMED_COMMANDS=("time" "bg" "fg" "more" "less" "man"
                              "emacs" "emacsclient" "nvim" "vim" "nano"
                              "ssh", "git")
