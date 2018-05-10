@@ -156,6 +156,7 @@ _get_exit_message() {
         case $signal in
             2) exit_message="INTerrupted" ;;
             9) exit_message="KILLed" ;;
+            13) exit_message="" ;;
             15) exit_message="TERMinated" ;;
             17) exit_message="" ;;
             18) exit_message="" ;;
