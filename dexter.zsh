@@ -36,7 +36,7 @@ DEXTER_TIME_LIMIT_SECS="${DEXTER_TIME_LIMIT_SECS:-5}"
 if ! [[ -n "${DEXTER_UNTIMED_COMMANDS+set}" ]]; then
     DEXTER_UNTIMED_COMMANDS=("time" "bg" "fg" "more" "less" "man"
                              "emacs" "emacsclient" "nvim" "vim" "nano"
-                             "ssh", "git")
+                             "ssh" "tmux" "screen" "git")
 fi
 
 
