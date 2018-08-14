@@ -163,7 +163,7 @@ _get_exit_message() {
             *) exit_message="SIGNAL $signal" ;;
         esac
     else
-        exit_message="exit $?"
+        exit_message="exit $1"
     fi
     if [[ -n "$exit_message" ]]; then
         exit_message="${DEXTER_EXIT_STATUS_COLOR}${exit_message}${reset_color}"
